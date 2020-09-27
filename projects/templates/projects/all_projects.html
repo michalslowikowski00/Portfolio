@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <h1>Slayer</h1>
-        <h2>Projects</h2>
+        <h2>Albums</h2>
         <div class="row">
             {% for project in projects %}
                 <div class="col-md-4">
@@ -19,7 +19,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ project.title }}</h5>
                             <p class="card-text">{{ project.description }}</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <a href="{% url 'projects:project_detail' project.pk %}" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>
