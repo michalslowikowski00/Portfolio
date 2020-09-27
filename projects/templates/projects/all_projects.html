@@ -6,16 +6,25 @@
     <meta charset="UTF-8">
     <title>Slayer</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <h1>Slayer</h1>
 </head>
-    <body>
-    <h1>Section with Python</h1>
-    {% for project in projects %}
-<!--        <img src="{% static project.image %}" alt="slayer album cover">-->
-        <img src="{% static 'projects/img/hellawaits.png' %}" alt="slayer album cover">
-        <h4>{{ project.title }}</h4>
-        <p>{{ project.description }}</p>
-        <p>{{ project.technology }}</p>
-    {% endfor %}
-    </body>
+<body>
+    <div class="container">
+        <h1>Slayer</h1>
+        <h2>Projects</h2>
+        <div class="row">
+            {% for project in projects %}
+                <div class="col-md-4">
+                    <div class="card mb-2">
+                        <img class="card-img-top" src="{% static project.image %}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ project.title }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
 </html>
