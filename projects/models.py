@@ -8,3 +8,8 @@ class Project(models.Model):
     description = models.TextField()
     technology = models.CharField(max_length=20)
     image = models.CharField(max_length=100)
+
+
+class Home(models.Model):
+    image = models.CharField(max_length=100)
+    description = models.TextField(max_length=100)
