@@ -23,6 +23,12 @@ def project_detail(request, pk):
     return render(request, "projects/detail.html", {"project": project})
 
 
+def about_band(request):
+    """"""
+    # projects = Project.objects.all()
+    return render(request, "projects/about_band.html", {})
+
+
 def home(request):
     home_page = Home.objects.all()
     return render(request, "projects/home_page.html", {"home": home_page})
